@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/theme/ayu-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/addon/edit/closebrackets.js"></script>
+    <script src="langnest.js"></script>
+    <link rel="stylesheet" href="editorStyle.css">
+    <title>Code-Editor</title>
+</head>
+<body>
+    <nav>
+        <div class="logo"><img src="LogoPng.png" alt="Logo"></div>
+        <ul>
+            <li><button onclick="executeProgram()"><img src="Run.png"><label>Run</label></button></li>
+            <li><button onclick="saveCode()"><img src="Save.png"><label>Save</label></button></li>
+            <li><button onclick="refreshCode()"><img src="Refresh.png"></button></li>
+            <li><label>Font-Size</label><input id="fontSize" type="text"><label>px</label></li>
+            <li><label>Tab-Spacing</label><input id="lineSpacing" type="text"></li>
+            <li><button id="applyBtn" onclick="applyChanges()">Apply</button></li>
+        </ul>
+        <div class="phone-options">
+            <button onclick="showCode()"><label>Code</label></button>
+            <button onclick="executeProgramAndShow()"><img src="Run.png"><label>Run</label></button>
+        </div>
+    </nav>
+    <main>
+        <div id="editor">
+            <div id="code-editor"></div>
+        </div>
+        <div id="outputDiv">
+            <div class="outDiv">
+                <h2>Output</h2>
+                <textarea id="output" readonly></textarea>
+            </div>
+            <div class="errDiv">
+                <h2>Error</h2>
+                <textarea id="error" readonly></textarea>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

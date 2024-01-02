@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100svh;
+    overflow-x: hidden;
+    background-color: rgb(17, 17, 17);
+}
+nav{
+    width: 100%;
+    height: 10%;
+    background-color: rgb(26, 26, 26);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 5%;
+    font-family: monospace;
+}
+nav ul li{
+    color: white;
+}
+nav ul li button{
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(35, 35, 35);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li button img{
+    width: 20px;
+}
+nav ul li button:hover{
+    transform: scale(1.05);
+}
+nav ul li label{
+    padding: 0 5px;
+    cursor: pointer;
+}
+nav ul li input{
+    width:30px;
+    padding: 5px;
+    text-align: center;
+    background-color: #2e2e2eb2;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+.phone-options{
+    display: none;
+}
+#applyBtn{
+    padding: 10px 20px;
+    background-color: rgb(144, 10, 253);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+.logo{
+    padding: 0 3%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo img{
+    height: 70%;
+}
+main{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#editor{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#outputDiv{
+    width: 30%;
+    height: 100%;
+}
+.outDiv{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:10px;
+}
+.errDiv{
+    width: 100%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:10px;
+}
+#outputDiv h2{
+    font-size: 14px;
+    font-weight: 200;
+    color: rgb(76, 76, 76);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#output{
+    width: 80%;
+    padding: 20px;
+    height: 75%;
+    color: white;
+    font-family: monospace;
+    overflow: auto;
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+}
+
+#error{
+    width: 80%;
+    padding: 20px;
+    height: 75%;
+    font-family: monospace;
+    overflow: auto;
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+    color: red;
+}
+
+.cm-keywords {
+    color: rgb(255, 122, 95);
+    /* Orange */
+}
+
+.cm-boolean {
+    color: rgb(34, 255, 244);
+    /* Green */
+}
+.cm-return {
+    color: rgb(160, 0, 61);
+    /* Green */
+}
+.cm-if-else {
+    color: rgb(255, 70, 113);
+    /* Blue */
+}
+.cm-func {
+    color: rgb(70, 179, 255);
+    /* Blue */
+}
+.cm-double-quote {
+    color: rgb(0, 181, 24);
+    /* Yellow */
+}
+.cm-comment {
+    color: rgb(83, 83, 83); /* or any other color you prefer for comments */
+}
+#code-editor{
+    width: 90%;
+    height: 90%;
+    box-shadow: 0 0 50px 1px rgba(67, 67, 67, 0.522);
+    font-size: 15px;
+}
+.CodeMirror{
+    padding: 20px 0;
+    height: 95%;
+}
+
+@media(max-width:930px){
+    nav ul{
+        gap: 10px;
+        padding: 0 3%;
+    }
+}
+
+@media(max-width:500px){
+    nav ul{
+        display: none;
+    }
+    #editor{
+        width: 100%;
+    }
+    #outputDiv{
+        display: none;
+        width: 100%;
+    }
+    .phone-options{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        height: 100%;
+        padding: 0 20px;
+    }
+    .phone-options button{
+        cursor: pointer;
+        padding: 15px;
+        border: none;
+        border-radius: 10px;
+        background-color: rgb(35, 35, 35);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+    .phone-options button img{
+        width: 15px;
+    }
+    #code-editor{
+        width: 95%;
+        height: 95%;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 10px;
+    background-color: #555;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: #2e2e2e;
+    border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #0f0f0f;
+    border-radius: 10px;
+}
+
+/* Handle on drag */
+::-webkit-scrollbar-thumb:active {
+    background-color: #777;
+}

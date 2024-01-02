@@ -1,0 +1,398 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(23, 23, 23);
+}
+nav{
+    margin: 5vh 0 0 5%;
+    width: 90%;
+    height: 10vh;
+    background-color: rgb(30, 30, 30);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+}
+.logo img{
+    height: 75%;
+}
+nav ul{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+    list-style-type: none;
+}
+nav ul li{
+    height: 100%;
+    padding: 0 20px;
+    transition: transform 0.5s;
+    background-color: rgb(30, 30, 30);
+    text-align: center;
+    cursor: pointer;
+}
+nav ul li:hover{
+    transform: translate(-5px,-5px);
+    box-shadow:5px 5px 10px 5px rgba(16, 16, 16, 0.748) ;
+}
+nav ul li a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+main{
+    margin: 0vh 5%;
+    width: 90%;
+    background-color: rgb(30, 30, 30);
+}
+.banner{
+    margin-left: 5%;
+    width: 90%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+}
+.banner-logo{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5%;
+}
+.banner-logo h1{
+    text-align: center;
+    color: white;
+    font-family: monospace;
+}
+.banner img{
+    width:40%;
+    border-radius: 10px;
+}
+.banner-logo img{
+    width: 90%;
+}
+
+.banner a{
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 5px solid white;
+    text-decoration: none;
+    color: white;
+    font-family: monospace;
+    font-size: 1rem;
+    transition: transform 0.4s;
+}
+.banner a:hover{
+    transform: translate(-10px,-10px);
+    box-shadow: 10px 10px 5px 10px rgba(18, 18, 18, 0.653);
+    border-color: rgba(255, 230, 8, 0.997);
+    color: rgba(255, 230, 8, 0.997) ;
+}
+
+.about{
+    margin-top:10vh;
+    width: 100%;
+    height: 80vh;
+}
+.about h1{
+    text-align: center;
+    color: rgb(136, 148, 255);
+    font-size: 4rem;
+    font-family: monospace;
+}
+
+.about-child{
+    margin-top:3vh;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.abt-info h1{
+    color: rgb(176, 158, 183);
+    font-size: 2rem;
+    width: 80%;
+}
+.abt-info h2{
+    text-align: center;
+    color: rgb(175, 180, 255);
+    font-family: monospace;
+    font-size: 1.6rem;
+    width: 60%;
+}
+.abt-info h3{
+    text-align: center;
+    color: rgb(141, 208, 202);
+    font-family: monospace;
+    font-size: 1rem;
+    width: 60%;
+}
+.abt-info a{
+    text-align: center;
+    color: rgb(63, 127, 255);
+    font-family: monospace;
+    font-size: 1rem;
+    width: 60%;
+}
+.abt-info{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5vh;
+}
+.about-child img{
+    border: 2px solid rgb(56, 56, 56);
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: 40%;
+}
+
+footer{
+    width: 100%;
+    height: 40vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3vh;
+}
+footer h2{
+    text-align: center;
+    font-family: monospace;
+    color: white;
+}
+footer h3{
+    text-align: center;
+    font-family: monospace;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+footer h3 img{
+    animation: move 2s linear infinite;
+}
+footer h3 img:hover{
+    transform: scale(1.1);
+}
+@keyframes move{
+    25%{
+        transform: translate(0,-5px);
+    }
+    75%{
+        transform: translate(0,5px);
+    }
+}
+
+@media (max-width:1000px){
+    .about h1{
+        font-size: 1.8rem;
+    }
+    .about-child h1{
+        font-size: 1.5rem;
+    }
+    .about-child h2{
+        font-size: 1.3rem;
+    }
+    .about-child h3{
+        font-size: 1rem;
+        word-break: break-all;
+    }
+    .about-child a{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:800px){
+    nav {
+        width: 100%;
+        margin: 0;
+        border-bottom: 1px solid black;
+    }
+    .logo{
+        display: none;
+    }
+    nav ul{
+        width: 100%;
+        padding: 0;
+        gap: 5px;
+    }
+    nav ul li{
+        padding: 0 10px;
+    }
+    nav ul li a{
+        font-size: 12px;
+    }
+    main{
+        width: 100%;
+        margin: 0;
+    }
+    .banner{
+        flex-direction: column-reverse;
+    }
+    .banner-logo{
+        width: 100%;
+    }
+    .banner img{
+        display: none;
+    }
+    .banner-logo img{
+        display: inline-block;
+    }
+    .banner-logo h1{
+        font-size: 20px;
+    }
+    .about{
+        /* background-color: blue; */
+        width: 100%;
+        height: 100vh;
+        padding: 5vh 0;
+    }
+    .about-child{
+        /* background-color: red; */
+        width: 100%;
+        height: 85vh;
+        gap: 4vh;
+        flex-direction: column;
+    }
+    .about h1{
+        font-size: 2rem;
+    }
+    .abt-info{
+        /* background-color: green; */
+        width: 90%;
+        gap: 3vh;
+    }
+    .about-child img{
+        width: 80%;
+    }
+    .about-child h1{
+        width: 100%;
+        font-size: 1.2rem;
+    }
+    .about-child h2{
+        width: 100%;
+        font-size: 1rem;
+    }
+    .about-child h3{
+        width: 100%;
+        font-size: 0.8rem;
+    }
+    .about-child a{
+        width: 100%;
+        font-size: 0.8rem;
+    }
+}
+@media (max-width:500px){
+    nav {
+        width: 100%;
+        margin: 0;
+        border-bottom: 1px solid black;
+    }
+    .logo{
+        display: none;
+    }
+    nav ul{
+        width: 100%;
+        padding: 0;
+        gap: 5px;
+    }
+    nav ul li{
+        padding: 0 10px;
+    }
+    nav ul li a{
+        font-size: 12px;
+    }
+    main{
+        width: 100%;
+        margin: 0;
+    }
+    .banner{
+        flex-direction: column-reverse;
+    }
+    .banner-logo{
+        width: 100%;
+    }
+    .banner img{
+        display: none;
+    }
+    .banner-logo img{
+        display: inline-block;
+    }
+    .banner-logo h1{
+        font-size: 20px;
+    }
+    .about{
+        /* background-color: blue; */
+        width: 100%;
+        height: 80vh;
+        padding: 5vh 0;
+    }
+    .about-child{
+        /* background-color: red; */
+        width: 100%;
+        height: 65vh;
+        gap: 4vh;
+        flex-direction: column;
+    }
+    .about h1{
+        font-size: 2rem;
+    }
+    .abt-info{
+        /* background-color: green; */
+        width: 90%;
+        gap: 3vh;
+    }
+    .about-child img{
+        width: 80%;
+    }
+    .about-child h1{
+        width: 100%;
+        font-size: 1.2rem;
+    }
+    .about-child h2{
+        width: 100%;
+        font-size: 1rem;
+    }
+    .about-child h3{
+        width: 100%;
+        font-size: 0.8rem;
+    }
+    .about-child a{
+        width: 100%;
+        font-size: 0.8rem;
+    }
+}
+
+
+
+::-webkit-scrollbar {
+    width: 0px;
+}
